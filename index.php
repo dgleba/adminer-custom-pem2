@@ -27,11 +27,21 @@ function adminer_object()
         // ]),
         // new AdminerLoginServers(),
 
-        new AdminerSimpleMenu(),
+        // new AdminerSimpleMenu(),
         new AdminerCollations(),
         new AdminerJsonPreview(),
-        new AdminerTablesFilter(),
-
+        
+        // these don't show on pematon adminer-custom..
+        
+        // adminer orig tables-filter
+        // new AdminerTablesFilter(),
+        // https://github.com/zhgabor/adminer-table-filter
+        // new AdminerQuickFilterTables,
+        
+        // https://github.com/arxeiss/Adminer-HideTables
+        new AdminerTablesHide(),
+        
+        
         //  allow sqlite with login-sqlite plugin and selecting sqlite3 server type and put full path to sqlite database file in database field.
         new AdminerLoginSqlite("sladmin", password_hash("sl", PASSWORD_DEFAULT)),
 
